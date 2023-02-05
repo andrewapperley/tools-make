@@ -43,8 +43,8 @@ ifneq ($(GNUSTEP_TARGET_OS), windows)
 endif
 
 # All code we build needs to be thread-safe nowadays
-INTERNAL_CFLAGS = -pthread
-INTERNAL_OBJCFLAGS = -pthread
+INTERNAL_CFLAGS =
+INTERNAL_OBJCFLAGS =
 INTERNAL_LDFLAGS =
   
 ifeq ($(debug), yes)
@@ -203,7 +203,7 @@ AFTER_INSTALL_STATIC_LIB_CMD = \
 	(cd $(LIB_LINK_INSTALL_DIR); \
 	$(RANLIB) $(LIB_LINK_VERSION_FILE))
 SHARED_LIB_LINK_CMD =
-SHARED_CFLAGS = -pthread 
+SHARED_CFLAGS =
 SHARED_LIBEXT =
 AFTER_INSTALL_SHARED_LIB_CMD = \
 	(cd $(LIB_LINK_INSTALL_DIR); \

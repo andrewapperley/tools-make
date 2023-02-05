@@ -322,3 +322,9 @@ GNUSTEP_CONFIG_FILE -
    After this, you are ready to start using a new one (by setting a new
 GNUSTEP_CONFIG_FILE and then sourcing the GNUstep.sh of the new one).
 
+DC
+
+Use 
+export CC=sh-elf-gcc                                            
+export CXX=sh-elf-g++
+./configure --host=sh-elf --target=sh-elf --prefix=/opt/gnustep 
