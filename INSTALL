@@ -325,6 +325,4 @@ GNUSTEP_CONFIG_FILE and then sourcing the GNUstep.sh of the new one).
 DC
 
 Use 
-export CC=sh-elf-gcc                                            
-export CXX=sh-elf-g++
-./configure --host=sh-elf --target=sh-elf --prefix=/opt/gnustep 
+CC=kos-cc CXX=kos-c++ ./configure --host=sh-elf --target=sh-elf --disable-libffi --disable-invocations --disable-ffcall --disable-xml --disable-tls --disable-icu --prefix=/opt/gnustep --enable-nxconstantstring --disable-iconv
